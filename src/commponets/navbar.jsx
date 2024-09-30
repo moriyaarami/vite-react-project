@@ -2,8 +2,6 @@ import { NavLink } from "react-router-dom";
 import Logo from "./logo";
 import { useAuth } from "../contexts/auth.context";
 
-
-
 function NavBar() {
 
   const { user } = useAuth();

@@ -5,7 +5,7 @@ function Header() {
     return (
         <header>
             <NavBar />
-            <h1 className="text-center">Welcome to <Logo></Logo></h1>
+
         </header>
     )
 
