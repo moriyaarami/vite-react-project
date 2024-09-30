@@ -1,8 +1,11 @@
-# React + Vite
+אתר זה מכיל כרטיסים של עסקים שונים, באתר זה אתה יכול ליצור חשבון אישי עסקי או רגיל.
+בחשבון רגיל יש לך אופציה של לראות את כל הכרטיסים של בתי העסק,
+ובחשבון עסקי יש לך אפשרות של ליצור כרטיסים לעסק שלך למחוק או לערוך את הכרטיסים שיצרת.
+אופן התממשקות באתר:
+כדי ליצור משתמש יש להיכנס לדף ה Sign Up, יש למלא את כל השדות הנדרשים ולבחור אם תרצה ליצור משתמש עסקי או לא,
+אחרי שנרשמת בהצלחה אתה תעבור לדף ה Sign In שם תצטרך למלא את השם משתמש והסיסמא שאיתם נרשמת,
+אחרי שהתחברת בהצלחה תעבור לדף הבית, משתמש שהוא מחובר יש לו אפשרות לעשות log out.
+למשתמש עסקי יופיע אפשרות של יצירת כרטיס חדש create card,
+אחרי שהמשתמש יצר את הכרטיס הוא יעבור לדף my cards, שם יוצגו לו כל הכרטיסים שהוא יצר, לכל כרטיס יש לו אפשרות של עריכת הכרטיס ומחיקת הכרטיס.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+בפרויקט זה השתמשתי ב react עם javascript 
