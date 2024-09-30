@@ -11,7 +11,7 @@ import MyCards from "./pages/myCard";
 import CardDelete from "./pages/delteCard";
 import EditCard from "./pages/editCard";
 import { createContext, useState } from "react";
-import { createContext } from "react";
+
 import "./App.css";
 
 export const ThemeContext = createContext(null);
