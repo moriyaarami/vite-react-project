@@ -2,8 +2,6 @@
 import { Link } from "react-router-dom"
 
 
-import { useState } from "react";
-
 function Card({ props, token = false }) {
 
     return <>
@@ -21,7 +19,7 @@ function Card({ props, token = false }) {
 
                 <a href={`tel:${props.phone}`} className="btn"><i className="bi bi-telephone-fill"></i></a>
 
-                <a href="#" className="btn" onClick={() => handleLike(props._id)}><i className="bi bi-heart"></i></a>
+                {/*  <a href="#" className="btn" onClick={() => handleLike(props._id)}><i className="bi bi-heart"></i></a> */}
 
                 <div className="d-flex justify-content-end gap-2 pt-3">
                     {token ? <> <Link to={`delete/${props._id}`} className="btn btn-light">Delte</Link>
