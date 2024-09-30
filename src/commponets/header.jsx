@@ -5,7 +5,6 @@ function Header() {
     return (
         <header>
             <NavBar />
-
         </header>
     )
 
