@@ -10,62 +10,72 @@ import LogOut from "./pages/logOut"
 import MyCards from "./pages/myCard";
 import CardDelete from "./pages/delteCard";
 import EditCard from "./pages/editCard";
-
-
 import "./App.css";
+import { createContext, useState } from "react";
+import ReactSwitch from "react-switch";
 
-
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
 
   return <>
+    <ThemeContext.Provider value={{ theme, toggleTheme }} >
+      <div className="app min-vh-100 d-flex flex-column gap-2" id={theme}>
+        <div className="switch">
+          <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+          <ReactSwitch onChange={toggleTheme} checked={theme === "light"} />
+        </div>
 
-    <div className="app min-vh-100 d-flex flex-column gap-2" >
-      <Header />
-      <main className="flex-fill">
-        <h6>hii</h6>
-        <Routes>
-          <Route path="/home" element={<Home />} />
+        <Header />
+        <main className="flex-fill">
 
-          <Route path="/about" element={<About />} />
+          <Routes>
+            <Route path="/home" element={<Home />} />
 
-          <Route
-            path="/my-card"
-            element={
-              <MyCards />
-            } />
+            <Route path="/about" element={<About />} />
 
-          <Route
-            path="/create-card"
-            element={<CreateCard />} />
+            <Route
+              path="/my-card"
+              element={
+                <MyCards />
+              } />
 
-          <Route
-            path="my-card/delete/:id"
-            element={<CardDelete />}
-          />
-          <Route
-            path="my-card/edit/:id"
-            element={<EditCard />}
-          />
-          {/*  <Route
+            <Route
+              path="/create-card"
+              element={<CreateCard />} />
+
+            <Route
+              path="my-card/delete/:id"
+              element={<CardDelete />}
+            />
+            <Route
+              path="my-card/edit/:id"
+              element={<EditCard />}
+            />
+            {/*  <Route
             path="/favorite-cards"
             element={<FavoriteCards />}
           /> */}
-          {/*  <Route
+            {/*  <Route
             path="home/info/:id"
             element={<ProtfolioCard />}
           /> */}
 
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/log-out" element={<LogOut />} redirect="/home" />
-        </Routes>
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/log-out" element={<LogOut />} redirect="/home" />
+          </Routes>
 
-      </main>
+        </main>
 
-      <Footer />
-    </div >
-
+        <Footer />
+      </div >
+    </ThemeContext.Provider>
   </>
 }
 

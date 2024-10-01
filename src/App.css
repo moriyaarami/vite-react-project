@@ -5,3 +5,31 @@
 #dark {
     background-color: black;
 }
+
+#light header {
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+    color: black;
+
+}
+
+#dark header {
+    background-color: rgb(33, 33, 33);
+    color: white;
+
+}
+
+.switch {
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+#light .switch label {
+    color: black;
+}
+
+#dark .switch label {
+    color: white;
+}
